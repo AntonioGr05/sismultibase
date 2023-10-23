@@ -13,13 +13,23 @@ export default function TablaUsuario() {
 
   useEffect(() => {
     getUsuarios()
-    console.log(data);
   }, [])
 
   
   return (
     <div>
         <h2>Tabla Usuarios</h2>
+        {data && Object.keys(data).map((key) => (
+          <div key={key} className='border-slate-300 border-2 p-1 my-2'>
+            <p>Nombre: {data[key].nombre}</p>
+            <p>Telefono: {data[key].telefono}</p>
+            <p>Email: {data[key].email}</p>
+            <p>Colonia: {data[key].colonia}</p>
+            <p>Calle: {data[key].calle}</p>
+            <p>Numero: {data[key].numero}</p>
+            <p>ID: {data[key].id}</p>
+          </div>
+        ))}
     </div>
   )
 }

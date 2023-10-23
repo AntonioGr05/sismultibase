@@ -8,5 +8,6 @@ export default async function handler(req, res) {
     usuariosRefSnapshot.forEach((doc) => {
         usuarios[doc.id] = doc.data()
     })
+    console.log(usuarios);;
     return res.status(200).json({usuarios})
 }   
