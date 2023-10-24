@@ -2,8 +2,6 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import TABLAUSUARIOS from '@/pages/components/tablaUsuario.js'
 
-
-
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
