@@ -1,8 +1,8 @@
 import { collection, getDocs} from "firebase/firestore";
-import { db } from "../../../firebase";
+import { dbF } from "../../../DB/firebase";
 
 export default async function handler(req, res) {
-    const usuariosRef = collection(db, "usuarios");
+    const usuariosRef = collection(dbF, "usuarios");
     const usuariosRefSnapshot = await getDocs(usuariosRef)
     const usuarios = {}
     usuariosRefSnapshot.forEach((doc) => {
