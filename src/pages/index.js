@@ -3,7 +3,6 @@ import { Inter } from 'next/font/google'
 import TABLAUSUARIOS from '@/pages/components/tablaUsuario.js'
 import TABLAPRESTAMOS from '@/pages/components/tablaPrestamo.js'
 
-
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
