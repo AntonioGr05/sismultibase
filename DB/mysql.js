@@ -13,3 +13,5 @@ pool.getConnection((err) => {
   }
   console.log("Conectado a BD");
 });
+
+module.exports=pool;
