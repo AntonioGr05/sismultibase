@@ -1,17 +1,18 @@
-const { createPool } = require("mysql");
-const pool = createPool({
-  host: "localhost",
-  user: "root",
-  password: "",
-  port: 3306,
-  database: "biblioteca",
+const mysql = require('mysql2');
+
+const connection = mysql.createConnection({
+  host: 'localhost',
+  user: 'root',
+  password: '',
+  database: 'biblioteca',
 });
 
-pool.getConnection((err) => {
-  if(err){
-    console.log("Error al conectar con BD");
+connection.connect((err) => {
+  if (err) {
+    console.error('Error al conectar a MySQL:', err);
+    return;
   }
-  console.log("Conectado a BD");
+  console.log('Conexión a MySQL establecida');
 });
 
-module.exports=pool;
+module.exports = connection;

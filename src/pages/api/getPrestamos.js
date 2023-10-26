@@ -1,4 +1,4 @@
-import React from 'react'
+/* import React from 'react'
 import pool from '../../../DB/postgrestsql';
 
 
@@ -11,4 +11,4 @@ export default async function handler(req, res) {
       console.error('Error al obtener los préstamos:', err);
       res.status(500).send('Error al obtener los préstamos');
     }
-  }
+  } */
