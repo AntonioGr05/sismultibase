@@ -4,7 +4,7 @@ import pool from '../../../DB/postgrestsql';
 
 export default async function handler(req, res) {
     try {
-      const result = await pool.query('SELECT * FROM prestamo_libros');
+      const result = await pool.query('SELECT * FROM prestamo');
       console.log(result.rows);
       res.status(200).json(result.rows);
     } catch (err) {
