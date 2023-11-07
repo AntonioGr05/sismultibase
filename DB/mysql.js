@@ -2,11 +2,11 @@ import mysql from 'serverless-mysql';
 
 const db = mysql({
     config: {
-      host: 'localhost',
-      port: 3306,
+      host: '25.51.102.222',
+      port: 3309,
       database: 'biblioteca',
-      user: 'root',
-      password: ''
+      user: 'fidel',
+      password: 'stoploki20'
     }
 });
 
