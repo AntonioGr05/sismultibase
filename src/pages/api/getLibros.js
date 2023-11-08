@@ -1,5 +1,3 @@
-// /api/getLibros.js
-
 import { query } from '../../../DB/mysql';
 
 export default async function getLibros(req, res) {
