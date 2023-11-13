@@ -8,7 +8,6 @@ export default function TablaLibro() {
 
     const getLibros = async () => {
         const res = await axios.get("../api/getLibros")
-        console.log(res);
     }
 
     useEffect(() => {
