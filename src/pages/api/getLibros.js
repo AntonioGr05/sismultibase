@@ -1,6 +1,16 @@
-import nc from "next-connect";
-/*import {obtenerLibros} from "../../../controller/libros";*/
+import excuteQuery from '../../../DB/mysql'
 
-const handler=nc();
-handler.get(obtenerLibros);
-export default handler;
+export default async (req, res) => {
+    try {
+        console.log("req nom", req.body)
+      const result = await excuteQuery({
+          query: 'SELECT * FROM libro',
+          values: [req.body.content],
+      });
+      console.log( "ttt",result );
+  } catch ( error ) {
+      console.log( error );
+  }
+  
+  
+  };
