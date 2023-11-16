@@ -81,9 +81,6 @@ export default function TablaPrestamo() {
                 </tbody>
                 </table>  
             </div>
-
-            
         </>
-        
     )
 }

@@ -29,6 +29,7 @@ export async function obtenerDatos() {
 
     return {
       prestamos: prestamosConDetalles,
+      usuarios: users,
     };
   } catch (error) {
     console.error('Error obteniendo datos:', error);
