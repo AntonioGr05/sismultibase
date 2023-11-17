@@ -1,13 +1,23 @@
 // makePrestamoButton.js
 import React from "react";
-
+import axios from "axios";
 const MakePrestamoButton = ({ selectedUser, selectedLibro }) => {
-    const handleClick = () => {
-        // Acceder al valor del usuario seleccionado y del libro seleccionado directamente desde las props
-        console.log("Usuario seleccionado:", selectedUser);
-        console.log("Libro seleccionado:", selectedLibro);
+    const handleClick = async () => {
+        let id_Libro = selectedLibro.id_libro;
+        let id_Usuario = selectedUser.id_usuario;
 
-        // Puedes realizar otras acciones con los valores seleccionados aquí
+        const prestamoData = {
+            id_libro: id_Libro,
+            id_usuario: id_Usuario
+        }
+
+        try {
+            const response = await axios.post('../api/postPrestamo', prestamoData);
+            alert(response.data[0].mensaje);
+            window.location.reload();
+        } catch (error) {
+            console.error('Error realizando el préstamo:', error);
+        }
     };
 
     const isButtonDisabled = !selectedUser || !selectedLibro;
